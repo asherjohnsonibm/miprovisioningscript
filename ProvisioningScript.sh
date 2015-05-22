@@ -5,7 +5,7 @@ sudo apt-get -y update
 sudo apt-get -y -f install vim make git lxc curl
 
 # Prevent root login via SSH
-sed -i -e "s/PermitRootLogin [y|Y]es/PermitRootLogin no/g" /etc/ssh/sshd_config 
+sed -i -e "s/PermitRootLogin [y|Y]es/PermitRootLogin without-password/g" /etc/ssh/sshd_config 
 service ssh restart 
 
 # Install Latest Ubuntu Trusty Docker Package
